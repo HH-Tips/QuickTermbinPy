@@ -13,7 +13,7 @@ Assicurati che l'eseguibile sia in una cartella inclusa nel `PATH` del tuo siste
 
 oppure installalo lanciando il seguente comando (consigliato):
 ```bash
-curl -sL https://raw.githubusercontent.com/HH-Tips/QuickTermbin/refs/heads/main/install.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/HH-Tips/QuickTermbinPy/refs/heads/main/install.sh | sudo bash
 ```
 ---
 
