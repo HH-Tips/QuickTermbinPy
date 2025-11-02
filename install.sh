@@ -22,9 +22,9 @@ create_launcher() {
     # Il "here document" (<<EOF) rende più pulita la scrittura di file multi-riga
     tee "$LAUNCHER_PATH" > /dev/null <<EOF
 #!/bin/bash
-# Launcher for QuickTermbin
+# Launcher for QuickTermbinPy
 
-# Esegue il JAR e passa tutti gli argomenti (\$@)
+# Esegue lo script python e passa tutti gli argomenti (\$@)
 python3 "$INSTALLATION_FOLDER/quick-termbin.py" "\$@"
 EOF
 
