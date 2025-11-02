@@ -8,8 +8,8 @@ download() {
     TMP_ZIP="/tmp/QuickTermbinPy.zip"
     mkdir $INSTALLATION_FOLDER
     wget $URL -O $TMP_ZIP
-    unzip $TMP_ZIP -d /tmp
-    mv "/tmp/QuickTermbinPy-${VERSION}" $INSTALLATION_FOLDER
+    unzip -o $TMP_ZIP -d /tmp
+    mv /tmp/QuickTermbinPy-$VERSION/* $INSTALLATION_FOLDER
 }
 
 create_launcher() {
