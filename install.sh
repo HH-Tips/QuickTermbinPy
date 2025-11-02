@@ -5,8 +5,11 @@ available_versions() {
 }
 
 download() {
+    TMP_ZIP="/tmp/QuickTermbinPy.zip"
     mkdir $INSTALLATION_FOLDER
-    wget $URL -O $INSTALLATION_FOLDER/QuickTermbin.jar
+    wget $URL -O $TMP_ZIP
+    unzip $TMP_ZIP -d /tmp
+    mv "/tmp/QuickTermbinPy-${VERSION}" $INSTALLATION_FOLDER
 }
 
 create_launcher() {
@@ -68,7 +71,7 @@ if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
 fi
 
 # Build the download URL
-URL="https://github.com/HH-Tips/QuickTermbinPy/releases/download/v${VERSION}/QuickTermbin.jar"
+URL="https://github.com/HH-Tips/QuickTermbinPy/archive/refs/tags/v${VERSION}.zip"
 
 echo "Checking for version ${VERSION}..."
 
